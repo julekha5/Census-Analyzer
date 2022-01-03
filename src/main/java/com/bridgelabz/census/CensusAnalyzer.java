@@ -8,7 +8,7 @@ import java.nio.file.Paths;
 import java.util.Iterator;
 import java.util.stream.StreamSupport;
 
-public class CensusAnalyzer {
+public class andCensusAnalyzer {
 
     public int loadIndiaCensusData(String csvPath) throws CensusAnalyzerException {
 
