@@ -4,10 +4,9 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class CensusAnalyzerTest {
-
-    private static final String INDIA_CENSUS_CSV_PATH_DELIMETER = "E:\\eclipseProgram\\untitled\\Census-Analyzer\\src\\main//resources//IndiaStateCensusData.csv";
-    private static final String INDIA_CENSUS_CSV_WRONG_FILETYPE = "E:\\eclipseProgram\\untitled\\Census-Analyzer\\src\\main\\resources\\IndiaStateCensusData.pdf";
     private static final String INDIA_CENSUS_CSV_PATH = "E:\\eclipseProgram\\untitled\\Census-Analyzer\\src\\main\\resources\\IndiaStateCensusData.csv";
+    private static final String INDIA_CENSUS_CSV_WRONG_FILETYPE = "E:\\eclipseProgram\\untitled\\Census-Analyzer\\src\\main\\resources\\IndiaStateCensusData.pdf";
+    private static final String INDIA_CENSUS_CSV_PATH_DELIMETER = "E:\\eclipseProgram\\untitled\\Census-Analyzer\\src\\main//resources//IndiaStateCensusData.csv";
     private static final String INDIA_CENSUS_CSV_PATH_HEADER = "E:\\eclipseProgram\\untitled\\Census-Analyzer\\src\\main\\resources\\IndiaStateCensusDataHeader.csv";
 
     //UseCase 1.1 Happy
