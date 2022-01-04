@@ -8,14 +8,13 @@ import java.nio.file.Paths;
 import java.util.Iterator;
 import java.util.stream.StreamSupport;
 
-public class andCensusAnalyzer {
+public class CensusAnalyzer {
 
-    public int loadIndiaCensusData(String csvPath) throws CensusAnalyzerException {
+    public void loadIndiaCensusData(String csvPath) throws CensusAnalyzerException {
 
         try (Reader reader = Files.newBufferedReader(Paths.get(csvPath))) {
-
             Iterator<IndiaCensusCSV> censusCSVIterator = getCSVIterator(reader, IndiaCensusCSV.class);
-            return getCount(censusCSVIterator);
+            getCount(censusCSVIterator);
 
         } catch (Exception e) {
             throw new CensusAnalyzerException(e.getMessage(), CensusAnalyzerException.ExceptionType.INCORRECT_DELIMETEREXCEPTION);
