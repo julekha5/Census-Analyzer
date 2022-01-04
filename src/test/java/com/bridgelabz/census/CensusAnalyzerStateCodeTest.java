@@ -19,5 +19,17 @@ public class CensusAnalyzerStateCodeTest {
         }
     }
 
+    //2.2 Sad test case for incorrect record
+    @Test
+    public void givenIndianStateCSVFileReturnsInCorrectRecords() {
+        CensusAnalyzer censusAnalyzer = new CensusAnalyzer();
+        try {
+            int numOfRecord = censusAnalyzer.loadIndiaStateCodeData(INDIA_STATE_CSV_PATH);
+            Assert.assertNotEquals(40, numOfRecord);
+        } catch (CensusAnalyzerException e) {
+            e.printStackTrace();
+        }
+    }
+
 
 }
