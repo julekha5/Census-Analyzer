@@ -2,6 +2,7 @@ package com.bridgelabz.census;
 
 import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvToBeanBuilder;
+
 import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -19,6 +20,7 @@ public class CensusAnalyzer {
         }
         return 0;
     }
+
     //generic method
     private <E> Iterator getCSVIterator(Reader reader, Class csvClass) {
         CsvToBeanBuilder<E> csvCsvToBeanBuilder = new CsvToBeanBuilder<>(reader);

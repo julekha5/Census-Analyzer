@@ -7,6 +7,7 @@ public class CensusAnalyzerStateCodeTest {
 
     private static final String INDIA_CENSUS_CSV_PATH = "E:\\eclipseProgram\\untitled\\Census-Analyzer\\src\\main\\resources\\IndiaStateCode.csv";
 
+    //2.1 Happy Test case for correct record match
     @Test
     public void givenIndianCensusCSVFileReturnsCorrectRecords() {
         CensusAnalyzer censusAnalyzer = new CensusAnalyzer();
