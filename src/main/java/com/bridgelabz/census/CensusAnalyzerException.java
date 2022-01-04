@@ -14,6 +14,7 @@ public class CensusAnalyzerException extends Exception {
         INDIA_CENSUS_CSV_PATH,
         INDIA_CENSUS_CSV_WRONG_FILETYPE,
         CSV_FILE_PROBLEM ,
-        INDIA_STATE_CSV_WRONG_FILETYPE;
+        INDIA_STATE_CSV_WRONG_FILETYPE,
+        WRONG_DELIMITER;
     }
 }
