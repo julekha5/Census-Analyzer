@@ -9,7 +9,7 @@ public class CensusAnalyzerStateCodeTest {
 
     //2.1 Happy Test case for correct record match
     @Test
-    public void givenIndianCensusCSVFileReturnsCorrectRecords() {
+    public void givenIndianStateCSVFileReturnsCorrectRecords() {
         CensusAnalyzer censusAnalyzer = new CensusAnalyzer();
         try {
             int numOfRecord = censusAnalyzer.loadIndiaStateCodeData(INDIA_STATE_CSV_PATH);
@@ -19,13 +19,21 @@ public class CensusAnalyzerStateCodeTest {
         }
     }
 
+<<<<<<< HEAD
     //2.2 Sad test case for incorrect record
+=======
+    //2.2 Sad Test case for wrong record
+>>>>>>> UC2.2_WrongRecords
     @Test
     public void givenIndianStateCSVFileReturnsInCorrectRecords() {
         CensusAnalyzer censusAnalyzer = new CensusAnalyzer();
         try {
             int numOfRecord = censusAnalyzer.loadIndiaStateCodeData(INDIA_STATE_CSV_PATH);
+<<<<<<< HEAD
             Assert.assertNotEquals(40, numOfRecord);
+=======
+            Assert.assertEquals(40, numOfRecord);
+>>>>>>> UC2.2_WrongRecords
         } catch (CensusAnalyzerException e) {
             e.printStackTrace();
         }

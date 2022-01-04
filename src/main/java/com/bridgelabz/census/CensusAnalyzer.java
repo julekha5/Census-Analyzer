@@ -29,6 +29,16 @@ public class CensusAnalyzer {
         }
         return 0;
     }
+    public int loadIndiaCensusData(String csvPath) throws CensusAnalyzerException {
+        try (Reader reader = Files.newBufferedReader(Paths.get(csvPath))) {
+            Iterator<IndiaCensusCSV> censusCSVIterator = getCSVIterator(reader, IndiaCensusCSV.class);
+            getCount(censusCSVIterator);
+        } catch (Exception e) {
+            throw new CensusAnalyzerException(e.getMessage(), CensusAnalyzerException.ExceptionType.CSV_FILE_PROBLEM);
+        }
+        return 0;
+    }
+
 
     //generic method
     private <E> Iterator getCSVIterator(Reader reader, Class csvClass) {
