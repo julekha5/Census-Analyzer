@@ -5,17 +5,17 @@ import org.junit.Test;
 
 public class CensusAnalyzerTest {
 
-    private static final String INDIA_CENSUS_CSV_WRONG_FILETYPE = "E:\\eclipseProgram\\untitled\\Census-Analyzer\\src\\main\\resources\\IndiaStateCensusDataHeader.pdf";
+    private static final String INDIA_CENSUS_CSV_PATH_DELIMETER = "E:\\eclipseProgram\\untitled\\Census-Analyzer\\src\\main//resources//IndiaStateCensusData.csv";
 
+    //UseCase 1.4 Path is correct but delimiter incorrect
     @Test
-    public void givenIndianCensusCSVFileReturnsInCorrecFileType_But_PathShouldBeCorrect() {
+    public void givenIndianCensusCSVFileReturnsIncorrectDelimeter(){
         CensusAnalyzer censusAnalyzer = new CensusAnalyzer();
         try {
-            censusAnalyzer.loadIndiaCensusData(INDIA_CENSUS_CSV_WRONG_FILETYPE);
-            Assert.assertEquals(29, true);
+            censusAnalyzer.loadIndiaCensusData(INDIA_CENSUS_CSV_PATH_DELIMETER);
+            Assert.assertTrue("Wrong delimiter", true);
         } catch (CensusAnalyzerException e) {
             e.printStackTrace();
         }
     }
 }
-
