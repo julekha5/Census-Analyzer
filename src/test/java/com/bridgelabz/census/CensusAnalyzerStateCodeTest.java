@@ -6,6 +6,7 @@ import org.junit.Test;
 public class CensusAnalyzerStateCodeTest {
 
     private static final String INDIA_STATE_CSV_PATH = "E:\\eclipseProgram\\untitled\\Census-Analyzer\\src\\main\\resources\\IndiaStateCode.csv";
+    private static final String INDIA_STATE_CSV_WRONG_FILETYPE = "E:\\eclipseProgram\\untitled\\Census-Analyzer\\src\\main\\resources\\IndiaStateCode.pdf";
 
     //2.1 Happy Test case for correct record match
     @Test
@@ -19,21 +20,25 @@ public class CensusAnalyzerStateCodeTest {
         }
     }
 
-<<<<<<< HEAD
-    //2.2 Sad test case for incorrect record
-=======
     //2.2 Sad Test case for wrong record
->>>>>>> UC2.2_WrongRecords
     @Test
     public void givenIndianStateCSVFileReturnsInCorrectRecords() {
         CensusAnalyzer censusAnalyzer = new CensusAnalyzer();
         try {
             int numOfRecord = censusAnalyzer.loadIndiaStateCodeData(INDIA_STATE_CSV_PATH);
-<<<<<<< HEAD
-            Assert.assertNotEquals(40, numOfRecord);
-=======
-            Assert.assertEquals(40, numOfRecord);
->>>>>>> UC2.2_WrongRecords
+            Assert.assertNotEquals(37, numOfRecord);
+        } catch (CensusAnalyzerException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //UseCase 2.3 Path is correct but file type is incorrect
+    @Test
+    public void givenIndianStateCSVFileReturnsInCorrecFileType_But_PathShouldBeCorrect() {
+        CensusAnalyzer censusAnalyzer = new CensusAnalyzer();
+        try {
+            int numOfRecord = censusAnalyzer.loadIndiaStateCodeData(INDIA_STATE_CSV_WRONG_FILETYPE);
+            Assert.assertEquals(29, numOfRecord);
         } catch (CensusAnalyzerException e) {
             e.printStackTrace();
         }
