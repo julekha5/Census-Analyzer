@@ -15,7 +15,7 @@ public class CensusAnalyzer {
             Iterator<IndiaCensusCSV> censusCSVIterator = getCSVIterator(reader, IndiaCensusCSV.class);
             getCount(censusCSVIterator);
         } catch (Exception e) {
-            throw new CensusAnalyzerException(e.getMessage(), CensusAnalyzerException.ExceptionType.WRONG_DELIMITER);
+            throw new CensusAnalyzerException(e.getMessage(), CensusAnalyzerException.ExceptionType.WRONG_HEADER_EXCEPTION);
         }
         return 0;
     }
