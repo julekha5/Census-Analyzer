@@ -9,7 +9,7 @@ public class CensusAnalyzerTest {
 
     //UseCase 1.4 Path is correct but delimiter incorrect
     @Test
-    public void givenIndianCensusCSVFileReturnsIncorrectDelimeter() {
+    public void givenIndianCensusCSVFileReturnsIncorrectDelimeter(){
         CensusAnalyzer censusAnalyzer = new CensusAnalyzer();
         try {
             censusAnalyzer.loadIndiaCensusData(INDIA_CENSUS_CSV_PATH_DELIMETER);
