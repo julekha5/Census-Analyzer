@@ -18,7 +18,7 @@ public class CensusAnalyzer {
             getCount(censusCSVIterator);
 
         } catch (Exception e) {
-            throw new CensusAnalyzerException(e.getMessage(), CensusAnalyzerException.ExceptionType.INCORRECT_DELIMETEREXCEPTION);
+            throw new CensusAnalyzerException(e.getMessage(), CensusAnalyzerException.ExceptionType.INCORRECT_HEADEREXCEPTION);
         }
     }
 
