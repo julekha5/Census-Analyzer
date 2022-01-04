@@ -11,6 +11,8 @@ public class CensusAnalyzerException extends Exception {
     }
 
     enum ExceptionType {
+        INDIA_CENSUS_CSV_PATH,
+        INDIA_CENSUS_CSV_WRONG_FILETYPE,
         CSV_FILE_PROBLEM;
     }
 }

@@ -10,7 +10,16 @@ import java.util.Iterator;
 import java.util.stream.StreamSupport;
 
 public class CensusAnalyzer {
+    public int loadIndiaCensusData(String csvPath) throws CensusAnalyzerException {
+        try (Reader reader = Files.newBufferedReader(Paths.get(csvPath))) {
+            Iterator<IndiaCensusCSV> censusCSVIterator = getCSVIterator(reader, IndiaCensusCSV.class);
+            getCount(censusCSVIterator);
+        } catch (Exception e) {
+            throw new CensusAnalyzerException(e.getMessage(), CensusAnalyzerException.ExceptionType.INDIA_CENSUS_CSV_PATH);
+        }
+        return 0;
 
+    }
     public int loadIndiaStateCodeData(String csvPath) throws CensusAnalyzerException {
         try (Reader reader = Files.newBufferedReader(Paths.get(csvPath))) {
             Iterator<IndiaStateCSV> censusCSVIterator = getCSVIterator(reader, IndiaStateCSV.class);
