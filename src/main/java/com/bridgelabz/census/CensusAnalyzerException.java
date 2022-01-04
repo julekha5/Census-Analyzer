@@ -11,6 +11,6 @@ public class CensusAnalyzerException extends Exception {
     }
 
     enum ExceptionType {
-        INCORRECT_DELIMETEREXCEPTION;
+        CSV_FILE_PROBLEM;
     }
 }
