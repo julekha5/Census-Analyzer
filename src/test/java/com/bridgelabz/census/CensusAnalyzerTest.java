@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class CensusAnalyzerTest {
 
-    private static final String INDIA_CENSUS_CSV_PATH = "E:\\eclipseProgram\\untitled\\Census-Analyzer\\src\\main\\resources\\IndiaStateCensusData.pdf";
+    private static final String INDIA_CENSUS_CSV_WRONG _FILETYPE = "E:\\eclipseProgram\\untitled\\Census-Analyzer\\src\\main\\resources\\IndiaStateCensusData.pdf";
 
     //UseCase 1.1 Happy
     @Test
@@ -41,7 +41,7 @@ public class CensusAnalyzerTest {
         CensusAnalyzer censusAnalyzer = new CensusAnalyzer();
 
         try {
-            int numOfRecord = censusAnalyzer.loadIndiaCensusData(INDIA_CENSUS_CSV_PATH);
+            int numOfRecord = censusAnalyzer.loadIndiaCensusData(INDIA_CENSUS_CSV_WRONG _FILETYPE);
             Assert.assertEquals(29, numOfRecord);
 
         } catch (CensusAnalyzerException e) {
